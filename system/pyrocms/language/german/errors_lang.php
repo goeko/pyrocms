@@ -7,5 +7,7 @@ $lang['error_404_message'] = 'Wir konnten die Seite, nach welcher du suchst, lei
 // Database
 $lang['error_invalid_db_group'] = 'Die Datenbank versucht eine ungültige Konfigurationsgruppe "%s" zu nutzen.';
 
+
+$lang['error_uploads_cachefolder'] = 'Erstellung der Verzeichnisse schlug fehl...';
 /* End of file errors_lang.php */
 /* Location: ./system/pyrocms/language/german/errors_lang.php */
