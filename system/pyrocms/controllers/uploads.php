@@ -1,8 +1,5 @@
 <?php  if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-// class Images extends Controller {
-// 
-//     function Images() {
 class Uploads extends CI_Controller {
 
 		function Uploads() {
