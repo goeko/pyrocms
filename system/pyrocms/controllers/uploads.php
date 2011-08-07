@@ -10,7 +10,7 @@ class Uploads extends CI_Controller {
         $this->img_dir = './uploads'; //$_SERVER['DOCUMENT_ROOT'] . '/uploads';
 
         // directory where cached files will be stored.
-        $this->cache_dir = $this->img_dir . '/image/_cached';
+        $this->cache_dir = $this->img_dir . '/_cached';
 			if (!$this->_mk_dir($this->cache_dir)) {
 				die($this->config->item('error_uploads_cachefolder'));
 			}
@@ -45,7 +45,10 @@ class Uploads extends CI_Controller {
         $dst_size = $this->uri->segment($this->offset);
         $dst_file = $this->cache_dir . '/' . $dst_size . $file;
 			
-			if (!in_array($dst_size, $this->sizes)) {
+			if (
+				(is_array($this->sizes) && !in_array($dst_size, $this->sizes))
+				|| intval($dst_size)>=800
+			) {
 				die('Fehler in der Parametisierung.');
 			}
 

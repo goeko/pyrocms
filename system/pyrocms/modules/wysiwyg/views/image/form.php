@@ -9,10 +9,6 @@ function insertImage()
 	alt = jQuery('input[name="alt"]').val();
 	align = jQuery('select[name="align"]').val();
 
-	// alert(source);
-	source='/uploads/size'+width+'x'+height+'/'+source.replace(/^\/uploads/g);
-
-
     var html = '<img class="mizu-image" width="'+width+'" height="'+height+'" src="'+ source +'" alt="'+ alt +'" align="'+align+'" />';
 
 	window.parent.instance.insertHtml(html);
@@ -57,7 +53,6 @@ var replace_html = null;
 			source = element.attr('src');
 			width = element.attr('width');
 			height = element.attr('height');
-			source='/uploads'+width+'x'+height+'/'+source.replace(/^\/uploads/g);
 			alt = element.attr('alt');
 			align = element.attr('align');
 			$('a#preview').attr('href', source).show();

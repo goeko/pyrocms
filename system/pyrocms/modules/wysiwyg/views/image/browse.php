@@ -8,8 +8,9 @@ function insertImage(file, alt)
 		replace_html.remove();
 	}
 	var img_width = document.getElementById('insert_width').value;
+	var img_height = document.getElementById('img_height').value;
 	
-	window.parent.instance.insertHtml('<img class="pyro-image" style="float: '+get_float()+';" src="' + BASE_URI + 'uploads/files/' + file + '" alt="' + alt + '" width="'+img_width+'" />');
+	window.parent.instance.insertHtml('<img class="pyro-image" style="float: '+get_float()+';" src="' + BASE_URI + 'uploads/size/'+img_width+'x'+img_height+'/files/' + file + '" alt="' + alt + '" width="'+img_width+'" />');
     	windowClose();
 }
 
